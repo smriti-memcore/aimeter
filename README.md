@@ -106,6 +106,9 @@ Install and run AIMeter via CLI:
 # Tap the repository
 brew tap smriti-memcore/aimeter
 
+# Trust the tap (Required for Homebrew 6.0.0+)
+brew trust smriti-memcore/aimeter
+
 # Install the package
 brew install aimeter
 
