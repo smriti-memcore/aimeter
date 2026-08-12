@@ -103,8 +103,8 @@ flowchart TD
 Install and run AIMeter via CLI:
 
 ```bash
-# Tap the repository
-brew tap smriti-memcore/aimeter
+# Tap the repository (the tap lives in the main repo's Formula/ directory)
+brew tap smriti-memcore/aimeter https://github.com/smriti-memcore/aimeter
 
 # Trust the tap (Required for Homebrew 6.0.0+)
 brew trust smriti-memcore/aimeter
