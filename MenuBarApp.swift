@@ -236,6 +236,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         checkUpdatesItem.target = self
         menu.addItem(checkUpdatesItem)
         
+        let starItem = NSMenuItem(title: "⭐ Star us on GitHub!", action: #selector(openGitHubRepo), keyEquivalent: "")
+        starItem.target = self
+        menu.addItem(starItem)
+        
         menu.addItem(NSMenuItem.separator())
         
         let versionItem = NSMenuItem(title: "Version \(CURRENT_VERSION)", action: nil, keyEquivalent: "")
@@ -491,6 +495,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func quitApp() {
         NSApplication.shared.terminate(self)
+    }
+    
+    @objc func openGitHubRepo() {
+        if let url = URL(string: "https://github.com/smriti-memcore/aimeter") {
+            NSWorkspace.shared.open(url)
+        }
     }
     
     @objc func openUpdateUrl(_ sender: NSMenuItem) {
